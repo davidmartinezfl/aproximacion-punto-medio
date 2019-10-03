@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+</head>
+
+<body>
+    <h1>Aproximación del Punto Medio</h1>
+</body>
+
+</html>
+
+<script>
+    const limiteInicialSuperior = 100
+    const limiteInicialInferior = 20
+    const objetivo = 52.5
+    const error = 0.5
+
+    var iteraciones = 0
+    var valor1 = limiteInicialSuperior
+    var valor2 = limiteInicialInferior
+    var resultado = 0
+
+    while (resultado != objetivo) {
+        iteraciones++;
+        resultado = (valor1 + valor2) / 2
+        console.log('resultado ' + iteraciones + ': ' + resultado);
+        if (resultado > objetivo)
+            valor1 = resultado
+
+        if (resultado < objetivo)
+            valor2 = resultado
+    }
+    console.log('Iteraciones: ' + iteraciones);
+</script>
